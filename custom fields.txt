@@ -1,0 +1,50 @@
+
+$ curl 'https://umdsph.planio.com/issues/2111.json'  -H 'X-Redmine-API-Key: 6bde3ef7991f578c654ce2610295e305'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1257    0  1257    0     0   1341      0 --:--:-- --:--:-- --:--:--  1341{"issue":{"id":2111,"project":
+{"id":18,"name":"Event Support"},
+"tracker":{"id":9,"name":"test"},
+"status":{"id":5,"name":"Open"},
+"priority":{"id":12,"name":"Normal"},
+"author":{"id":1,"name":"Mary Shelley"},
+"subject":"big form request",
+"description":"test",
+"start_date":"2019-05-29",
+"done_ratio":0,
+"custom_fields":[
+{"id":1,"name":"Follow up date","value":"2019-05-30"},
+{"id":11,"name":"Requestor","value":"MAry"},
+{"id":12,"name":"Department","value":"23"},
+{"id":15,"name":"Event Duration","value":"1 hour"},
+{"id":16,"name":"Event Start Time","value":"8 a.m."},
+{"id":17,"name":"Estimated Attendance","value":"10 people"},
+{"id":18,"name":"Event AV Equip. Reqs.","multiple":true,"value":["26","28"]},
+{"id":19,"name":"Event Webex Requirements","multiple":true,"value":["30","32"]},
+{"id":20,"name":"Event Media Requirements","multiple":true,"value":["34"]},
+{"id":23,"name":"Event Locatoin","value":"37"},
+{"id":24,"name":"Event purpose/style","value":"42"},
+{"id":25,"name":"VIPs Expected","value":"0"},
+{"id":26,"name":"Event Freidgen Layout","value":"49"},
+{"id":27,"name":"Event Date","value":"2019-05-30"}],
+"created_on":"2019-05-29T19:01:37Z",
+"updated_on":"2019-05-29T19:01:37Z",
+"reply_token":"73ba13",
+"tracking_uri":"https://umdsph.planio.com/track/2111/73ba13"}}
+
+
+curl 'https://umdsph.planio.com/custom_fields.json' -H 'X-Redmine-API-Key: 6bde3ef7991f578c654ce2610295e305'
+
+
+
+
+
+Mary Shelley@DESKTOP-6D8CHOD MINGW64 ~/Documents/vc_projs/webstuff (master)
+$ curl 'https://umdsph.planio.com/custom_fields.json' -H 'X-Redmine-API-Key: 6bde3ef7991f578c654ce2610295e305'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0{"custom_fields":[{"id":1,"name":"Follow up date","customized_type":"issue","field_format":"date","regexp":"","default_value":"","visible":true,"trackers":[{"id":3,"name":"Task"},{"id":4,"name":"Support"},{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":2,"name":"Location","customized_type":"issue","field_format":"string","regexp":"","is_required":true,"is_filter":true,"searchable":true,"default_value":"","visible":true,"trackers":[{"id":5,"name":"Facilities Management"},{"id":6,"name":"Building Security Systems"}],"roles":[]},{"id":5,"name":"Work Request #","customized_type":"issue","field_format":"string","regexp":"","is_required":true,"is_filter":true,"searchable":true,"default_value":"","visible":true,"trackers":[{"id":5,"name":"Facilities Management"}],"roles":[]},{"id":6,"name":"Work Task #","customized_type":"issue","field_format":"string","regexp":"","is_filter":true,"searchable":true,"default_value":"","visible":true,"trackers":[{"id":5,"name":"Facilities Management"}],"roles":[]},{"id":7,"name":"FM Shop","customized_type":"issue","field_format":"enumeration","regexp":"","is_filter":true,"default_value":"","visible":true,"possible_values":[{"value":"1","label":"HVAC Services"},{"value":"2","label":"Electrical Services \u0026 Life Safety"},{"value":"3","label":"Piped Services \u0026 Warranties"},{"value":"4","label":"Preventative Maintenance"},{"value":"5","label":"Rennovation Services"},{"value":"6","label":"Signs \u0026 Graphics"},{"value":"7","label":"Incident Response"},{"value":"24","label":"Elevator Services"}],"trackers":[{"id":5,"name":"Facilities Management"}],"roles":[]},{"id":8,"name":"Test Custom Field","customized_type":"issue","field_format":"string","regexp":"","default_value":"","visible":true,"trackers":[{"id":4,"name":"Support"}],"roles":[]},{"id":9,"name":"KFS","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"is_filter":true,"default_value":"","visible":true,"possible_values":[{"value":"8","label":"Maintenance"},{"value":"9","label":"Dean - 2935230"},{"value":"10","label":"Health Lit - 2951000"},{"value":"11","label":"BCH - 2956400"},{"value":"12","label":"KNES - 2946360"},{"value":"13","label":"EPIB - 2935300"},{"value":"14","label":"HLSA - 2935110"},{"value":"15","label":"FMSC - 2935170"},{"value":"16","label":"MCHE - 2952050"},{"value":"25","label":"CHAMP - 2935020"}],"trackers":[{"id":5,"name":"Facilities Management"},{"id":6,"name":"Building Security Systems"}],"roles":[]},{"id":11,"name":"Requestor","customized_type":"issue","field_format":"string","regexp":"","is_required":true,"is_filter":true,"searchable":true,"default_value":"","visible":true,"trackers":[{"id":5,"name":"Facilities Management"},{"id":6,"name":"Building Security Systems"},{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},
+  
+  
+  
+  {"id":12,"name":"Department","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"is_filter":true,"default_value":"","visible":true,"possible_values":[{"value":"18","label":"Behavioral \u0026 Community Health"},{"value":"20","label":"Epidemiology"},{"value":"19","label":"Family Science"},{"value":"22","label":"Health Services Administration"},{"value":"17","label":"Kinesiology"},{"value":"21","label":"Maryland Institute for Applied Environmental Health"},{"value":"23","label":"Dean's Office"}],"trackers":[{"id":5,"name":"Facilities Management"},{"id":6,"name":"Building Security Systems"},{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":13,"name":"Work Order #","customized_type":"issue","field_format":"string","regexp":"","is_required":true,"is_filter":true,"searchable":true,"default_value":"","visible":true,"trackers":[{"id":6,"name":"Building Security Systems"}],"roles":[]},{"id":15,"name":"Event Duration","customized_type":"issue","field_format":"string","regexp":"","is_required":true,"default_value":"1 hour","visible":true,"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":16,"name":"Event Start Time","customized_t100  7854    0  7854    0     0   9866      0 --:--:-- --:--:-- --:--:--  9866field_format":"string","regexp":"","is_required":true,"default_value":"8 a.m.","visible":true,"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":17,"name":"Estimated Attendance","customized_type":"issue","field_format":"string","regexp":"","is_required":true,"is_filter":true,"searchable":true,"default_value":"10 people","visible":true,"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":18,"name":"Event AV Equip. Reqs.","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"multiple":true,"default_value":"29","visible":true,"possible_values":[{"value":"26","label":"Microphones/Amplification"},{"value":"27","label":"Lo-fi Recording (via iPad)"},{"value":"28","label":"Videographer"},{"value":"29","label":"None of the Above"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":19,"name":"Event Webex Requirements","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"multiple":true,"default_value":"33","visible":true,"possible_values":[{"value":"30","label":"One-Way Broadcast"},{"value":"31","label":"Two-Way Communication"},{"value":"32","label":"Webex Recording"},{"value":"33","label":"None of the Above"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":20,"name":"Event Media Requirements","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"multiple":true,"default_value":"36","visible":true,"possible_values":[{"value":"34","label":"PowerPoint Presentations"},{"value":"35","label":"Other Media (videos, photos, etc.)"},{"value":"36","label":"None of the Above"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":23,"name":"Event Locatoin","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"is_filter":true,"default_value":"37","visible":true,"possible_values":[{"value":"37","label":"Friedgen Family Seminar Room"},{"value":"38","label":"Lynn Reilly Faculty/Staff Lounge"},{"value":"39","label":"Concourse"},{"value":"40","label":"General Purpose Classroom"},{"value":"41","label":"Off-Site (specify)"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":24,"name":"Event purpose/style","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"is_filter":true,"default_value":"42","visible":true,"possible_values":[{"value":"42","label":"SPH Internal/informal"},{"value":"43","label":"Public/High-Profile"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":25,"name":"VIPs Expected","customized_type":"issue","field_format":"bool","regexp":"","is_required":true,"default_value":"0","visible":true,"possible_values":[{"value":"1","label":"Yes"},{"value":"0","label":"No"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":26,"name":"Event Freidgen Layout","customized_type":"issue","field_format":"enumeration","regexp":"","is_required":true,"default_value":"49","visible":true,"possible_values":[{"value":"45","label":"Not Applicable (event in another space)"},{"value":"46","label":"Auditorium (71 max)"},{"value":"47","label":"Box (28@tables, 49 max)"},{"value":"48","label":"Cafe (48 max)"},{"value":"49","label":"Classroom (27 max)"},{"value":"50","label":"Conference Room (27 max)"},{"value":"51","label":"Lunch Room (56 max)"}],"trackers":[{"id":8,"name":"Event Request"},{"id":9,"name":"test"}],"roles":[]},{"id":27,"name":"Event Date","customized_type":"issue","field_format":"date","regexp":"","default_value":"","visible":true,"trackers":[{"id":9,"name":"test"}],"roles":[]}]}
