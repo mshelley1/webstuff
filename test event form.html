@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Event Support Request Form</title>
+	
+<style type="text/css">body { font-family: sans-serif; margin: 2em; }
+      label, input, textarea, select {
+        width: 15em;
+        float: left;
+        margin-bottom: 1em;
+        font-size: 1.2em;
+      }
+	
+      label, input[type=submit] { width: 10em; clear: left; }
+      #url, .thanks, .error { display: none; }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+      $(function() {
+        $('form').submit(function() {
+          $.ajax({
+            cache: false,
+			url: $(this).attr('action') + '.json',
+            method: 'post',
+            dataType: 'json',
+            data: $(this).serialize(),
+            success: function () {
+              $('form').hide();
+              $('.thanks').show();
+			  console.log();
+
+            },
+            error: function () {
+              $('.error').show();
+            }
+          });
+          return false;
+        });
+      });
+    </script>
+</head>
+
+<body>
+
+<form action="https://umdsph.planio.com/helpdesk" method="POST">
+<p class="error">Something went wrong. Please try again.</p>
+
+<label for="name">Your name:</label>
+<input id="name" name="name" required="" type="text" />
+
+<label for="mail">Your email address:</label>
+<input id="mail" name="mail" required="" type="email" />
+
+<label for="subject">Event Name:</label>
+<input id="subject" name="subject" required="" type="text" />
+
+<label for="requestor">Event Organizer:</label>
+<input id="requestor" name="custom_field_values[issue][11]" required="" type="text" />
+
+<label for="Department">Sponsoring Department:</label>
+<select id="department" name="custom_field_values[issue][12]" required="">
+  <option value="18">BCH</option>
+  <option value="20">EPIB</option>
+  <option value="19">FMSC</option>
+  <option value="22">HPM</option>
+  <option value="17">KNES</option>
+  <option value="21">MIAEH</option>
+  <option value="23">Deans' Office</option>
+ </select>
+ 
+<label for="event_date">Event Date:</label>
+<input id="event_date" name="custom_field_values[issue][27]" required="" type="date" format="mm/dd/yyyy" />
+
+<label for="event_start_time">Start Time:</label>
+<input id="event_start_time" name="custom_field_values[issue][16]" required="" type="time"/>
+
+<label for="event_end_time">End Time:</label>
+<input id="event_end_time" name="custom_field_values[issue][28]" required="" type="time"/>
+
+<label for="est_attend">Estimated Attendance:</label>
+<input id="est_attend" name="custom_field_values[issue][17]" required="" type="text" />
+
+<label for="av_eq">AV Equipment (use ctrl to select multiple)</label>
+<select multiple id="av_eq" name="custom_field_values[issue][18]" required="">
+	<option value="26">Microphone/Amplification</option>
+	<option value="27">Lo-fi Recroding (via iPad)</option>
+	<option value="28">Videographer (not guaranteed)</option>
+	<option value="29">None</option>
+</select>
+
+<label for="webex">Webex (use ctrl to select multiple)</label>
+<select multiple id="webex" name="custom_field_values[issue][19]" required="">
+	<option value="30">One-way broadcast</option>
+	<option value="31">Two-way (remote contributors)</option>
+	<option value="32">Webex Recording</option>
+	<option value="33">None</option>
+</select>
+
+<label for="media">Media Requirements (use ctrl to select multiple)</label>
+<select multiple id="media" name="custom_field_values[issue][20]" required="">
+	<option value="34">PowerPoint or similar Presentation </option>
+	<option value="35">Other (videos, photos, etc.); specify in notes</option>
+	<option value="36">None</option>
+</select>
+
+<label for="location">Requested Location</label>
+<select id="location" name="custom_field_values[issue][23]" required="">
+	<option value="37">Friedgen Family Seminar Room </option>
+	<option value="38">Lynn Reily Facutly/Staff Lounge</option>
+	<option value="39">Concourse</option>
+	<option value="40">General Purpose Classroom</option>
+	<option value="41">Off-site; specify in notes</option>
+</select>
+
+<label for="layout">Friedgen Layout (max people shown in parentheses)</label>
+<select id="layout" name="custom_field_values[issue][26]" required="">
+	<option value="45">N/A Event in other location</option>
+	<option value="46">Auditorium (71)</option>
+	<option value="47">Box (28 at tables, 49 total)</option>
+	<option value="48">Cafe (48)</option>
+	<option value="49">Classroom (27)</option>
+	<option value="50">Conference Room (27)</option>
+	<option value="51">Lunchroom (56)</option>
+</select>
+
+<label for="event_style">Audience/style</label>
+<select id="event_style" name="custom_field_values[issue][24]" required="">
+	<option value="42">SPH Internal/Informal </option>
+	<option value="43">Public/High-profile</option>
+</select>
+
+<label for="vip">VIPs expected</label>
+<select id="vip" name="custom_field_values[issue][25]" required="">
+	<option value="0">No</option>
+	<option value="1">Yes; specify who in notes</option>
+</select>
+<label for="description">Notes::</label>
+<textarea cols="50" id="description" name="description"  rows="10"> </textarea>
+
+<input name="project" type="hidden" value="event-support" />
+
+<!--<style type="text/css">#url { display:none; }</style>
+<input id="url" name="url" type="text" /> -->
+
+<input name="url" id="url" type="text" />
+
+<input type="submit" value="Submit request" />
+
+</form>
+
+<p class="thanks">Thank you for getting in touch. We will reply shortly.</p>
+</body>
+</html>
