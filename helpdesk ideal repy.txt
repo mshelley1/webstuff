@@ -1,0 +1,27 @@
+--- Please write your response above this line ---
+
+Thank you for submitting your event request. We are working on responding to you as soon as possible. If you have any additional information to add to this case, please reply to this email.
+
+The information we received from you is as follows:
++Event Name+: {{issue.subject}}
++Event Organizer+: {{issue.requestor}}
++Sponsoring Department+: {{issue.department}}
+
++Event Date+: {{issue.event_date}}
++Start Time+: {{issue.event_start_time}}
++End Time+: {{issue.event_end_time}}
++Estimated Attendance+: {{issue.estimated_attendance}}
+
++A/V Equipment+: {{issue.event_av_equip_reqs_}}
++Webex Requirements+: {{issue.event_webex_requirements}}
++Media Requirements+: {{issue.event_media_requirements}}
+
++Requested Location+: {{issue.event_locatoin}}
++Friedgen Layout+: {{issue.event_freidgen_layout}}
++Audience/Style+: {{issue.event_purpose_style}}
++VIPs Expected+: {{issue.vi_ps_expected}}
+
+
++To check the status of this request please go to+: {{issue.tracking_uri}}
+
+SPH Solutions Center Team
