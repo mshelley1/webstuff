@@ -3,16 +3,20 @@
 <head>
 	<title>Event Support Request Form</title>
 		
-<style type="text/css">body { font-family: sans-serif; margin: 2em; }
-      label, input, textarea, select {
+<style type="text/css">
+	body { font-family: sans-serif; margin: 2em; }
+    
+	label, input, textarea, select {
         width: 15em;
         float: left;
         margin-bottom: 1em;
         font-size: 1.2em;
-      }
+    }
 	
-      label, input[type=submit] { width: 10em; clear: left; }
+    label, input[type=submit] { width: 10em; clear: left; }
       #url, .thanks, .error { display: none; }
+	  
+	  
 </style>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -20,6 +24,7 @@
       $(function() {
         $('form').submit(function() {
           $.ajax({
+			tradtional: true,
             cache: false,
 			url: $(this).attr('action') + '.json',
             method: 'post',
@@ -29,7 +34,6 @@
               $('form').hide();
               $('.thanks').show();
 			  console.log();
-
             },
             error: function () {
               $('.error').show();
@@ -94,7 +98,7 @@
 <input id="est_attend" name="custom_field_values[issue][17]" type="text" />
 
 <label for="av_eq">AV Equipment (use ctrl to select multiple):</label>
-<select multiple id="av_eq" name="custom_field_values[issue][18]" >
+<select multiple id="av_eq" name="custom_field_values[issue][18]" type="array">
 	<option></option>
 	<option value="26">Microphone/Amplification</option>
 	<option value="27">Lo-fi Recroding (via iPad)</option>
@@ -119,15 +123,17 @@
 	<option value="36">None</option>
 </select>
 
-<label for="location">Requested Location (if multiple spaces required, specify in notes):</label>
-<select id="location" name="custom_field_values[issue][23]" >
+
+<label for="location" title="See event guidelines for important info on Friedgen Lounge."><u>Requested Location(s):</u></label>
+<select multiple id="location" name="custom_field_values[issue][23]" >
     <option></option>
 	<option value="37">Friedgen Family Seminar Room </option>
-	<option value="38">Lynn Reily Facutly/Staff Lounge</option>
+	<option value="38">Lynn Reilly Facutly/Staff Lounge</option>
 	<option value="39">Concourse</option>
 	<option value="40">General Purpose Classroom</option>
 	<option value="41">Off-site/Other; specify in notes</option>
 </select>
+
 
 <label for="layout">Friedgen Layout (max people shown in parentheses):</label>
 <select id="layout" name="custom_field_values[issue][26]" >
@@ -149,7 +155,7 @@
 </select>
 
 <label for="event_style">Audience/style:</label>
-<select id="event_style" name="custom_field_values[issue][24]">
+<select multiple id="event_style" name="custom_field_values[issue][24]">
     <option></option>
 	<option value="42">SPH Internal/Informal </option>
 	<option value="43">Public/High-profile</option>
