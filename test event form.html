@@ -24,13 +24,12 @@
       $(function() {
         $('form').submit(function() {
           $.ajax({
-			tradtional: true,
             cache: false,
 			url: $(this).attr('action') + '.json',
             method: 'post',
-            dataType: 'json',
-            data: $(this).serialize(),
-            success: function () {
+            dataType: 'json',			
+            data: $('form').serializeArray() + '.json',  //'form' instead of this, serializeArray instead of serialize, and [] after mutliple select names]
+			success: function () {
               $('form').hide();
               $('.thanks').show();
 			  console.log();
@@ -42,7 +41,12 @@
           return false;
         });
       });
-    </script>
+	  
+    }
+	
+});
+  
+</script>
 </head>
 
 <body>
@@ -98,7 +102,7 @@
 <input id="est_attend" name="custom_field_values[issue][17]" type="text" />
 
 <label for="av_eq">AV Equipment (use ctrl to select multiple):</label>
-<select multiple id="av_eq" name="custom_field_values[issue][18]" type="array">
+<select multiple id="av_eq" name="custom_field_values[issue][18][]">
 	<option></option>
 	<option value="26">Microphone/Amplification</option>
 	<option value="27">Lo-fi Recroding (via iPad)</option>
@@ -107,7 +111,7 @@
 </select>
 
 <label for="webex">Webex (use ctrl to select multiple):</label>
-<select multiple id="webex" name="custom_field_values[issue][19]" >
+<select multiple id="webex" name="custom_field_values[issue][19][]" >
     <option></option>
 	<option value="30">One-way broadcast</option>
 	<option value="31">Two-way (remote contributors)</option>
@@ -116,7 +120,7 @@
 </select>
 
 <label for="media">Media Requirements (use ctrl to select multiple):</label>
-<select multiple id="media" name="custom_field_values[issue][20]" >
+<select multiple id="media" name="custom_field_values[issue][20][]" >
     <option></option>
 	<option value="34">PowerPoint or similar Presentation </option>
 	<option value="35">Other (videos, photos, etc.); specify in notes</option>
@@ -124,8 +128,8 @@
 </select>
 
 
-<label for="location" title="See event guidelines for important info on Friedgen Lounge."><u>Requested Location(s):</u></label>
-<select multiple id="location" name="custom_field_values[issue][23]" >
+<label for="location" title="See event guidelines for important info on Friedgen Lounge."><u>Requested Location(s) (use ctrl to select multiple):</u></label>
+<select multiple id="location" name="custom_field_values[issue][23][]" >
     <option></option>
 	<option value="37">Friedgen Family Seminar Room </option>
 	<option value="38">Lynn Reilly Facutly/Staff Lounge</option>
@@ -155,7 +159,7 @@
 </select>
 
 <label for="event_style">Audience/style:</label>
-<select multiple id="event_style" name="custom_field_values[issue][24]">
+<select multiple id="event_style" name="custom_field_values[issue][24][]">
     <option></option>
 	<option value="42">SPH Internal/Informal </option>
 	<option value="43">Public/High-profile</option>
@@ -174,14 +178,13 @@
 
 <input name="project" type="hidden" value="event-support" />
 
-<!--<style type="text/css">#url { display:none; }</style>
-<input id="url" name="url" type="text" /> -->
 
 <input name="url" id="url" type="text" />
 
 <input type="submit" value="Submit request" />
 
 </form>
+
 
 <p class="thanks">Thank you for getting in touch. We will reply shortly.</p>
 </body>
