@@ -18,3 +18,6 @@ File list
  * test event form.html
     - latest code, all necessary custom fields added
     - submit does not work properly as of 7/19: form hide and thank you not working
+
+* soln ctr main form.html
+     - code from the prod main site for primary ticketing form
