@@ -1,0 +1,47 @@
+<title></title>
+<style type="text/css">body { font-family: sans-serif; margin: 2em; }
+      label, input, textarea {
+        width: 15em;
+        float: left;
+        margin-bottom: 1em;
+        font-size: 1.2em;
+      }
+      label, input[type=submit] { width: 10em; clear: left; }
+      #url, .thanks, .error { display: none; }
+</style>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script type="text/javascript">
+      $(function() {
+        $('form').submit(function() {
+          $.ajax({
+            url: $(this).attr('action') + '.json',
+            method: 'post',
+            dataType: 'json',
+            data: $(this).serialize(),
+            success: function () {
+              $('form').hide();
+              $('.thanks').show();
+            },
+            error: function () {
+              $('.error').show();
+            }
+          });
+          return false;
+        });
+      });
+    </script>
+<h1>Contact us!</h1>
+
+<form action="https://umdsph.planio.com/helpdesk" method="POST">
+<p class="error">Something went wrong. Please try again.</p>
+<label for="name">Your name:</label> <input id="name" name="name" required="" type="text" />
+<label for="mail">Your email address:</label> <input id="mail" name="mail" required="" type="email" />
+<label for="subject">Subject:</label> <input id="subject" name="subject" type="text" />
+<label for="description">Your message:</label><textarea cols="50" id="description" name="description" required="" rows="10"></textarea> 
+
+<input name="project" type="hidden" value="solutions-center" /> 
+
+<style type="text/css">#url { display:none; }
+</style>
+<input id="url" name="url" type="text" /> <input type="submit" value="Submit request" />&nbsp;</form>
+
+<p class="thanks">Thank you for getting in touch. We will reply shortly.</p>
