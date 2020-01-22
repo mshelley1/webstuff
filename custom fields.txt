@@ -33,11 +33,10 @@ $ curl 'https://umdsph.planio.com/issues/2111.json'  -H 'X-Redmine-API-Key: 6bde
 "tracking_uri":"https://umdsph.planio.com/track/2111/73ba13"}}
 
 
+
+
+
 curl 'https://umdsph.planio.com/custom_fields.json' -H 'X-Redmine-API-Key: 6bde3ef7991f578c654ce2610295e305'
-
-
-
-
 
 Mary Shelley@DESKTOP-6D8CHOD MINGW64 ~/Documents/vc_projs/webstuff (master)
 $ curl 'https://umdsph.planio.com/custom_fields.json' -H 'X-Redmine-API-Key: 6bde3ef7991f578c654ce2610295e305'

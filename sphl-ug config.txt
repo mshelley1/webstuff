@@ -1,0 +1,48 @@
+Customizae > Mail Templates > Digests and Indexes > Preamble
+--------------------------------------------------------------
+
+.CS windows-1252
+SPHL-UG is generated through the School of Public Health.
+
+Announcements do not reflect the position of the University unless
+specifically noted.
+
+To SUBMIT an item, go to: https://sph.umd.edu/webform/sphl-undergraduate-news-submission
+
+ARCHIVES can be found at: https://listserv.umd.edu/archives/sphl-ug.html
+
+To UNSUBSCRIBE send the message "signoff sphl-ug" to listserv@listserv.umd.edu.
+
+***It is strongly advised for current SPH undergraduates to remain on this list.***
+
+.bb &MSGCOUNT > 1
+There are &MSGCOUNT messages
+.else
+There is 1 message
+.eb
+totaling &LINECOUNT
+.bb &LINECOUNT = 1
+line
+.else
+lines
+.eb
+in this issue.
+
+.bb &TYPE = 1
+Topics in this special issue:
+.qu
+.eb
+.bb &TYPE = 2
+Topics collected thus far:
+.qu
+.eb
+Topics of the
+.bb &PERIOD = 'W'
+week:
+.qu
+.eb
+.bb &PERIOD = 'M'
+month:
+.qu
+.eb
+day:

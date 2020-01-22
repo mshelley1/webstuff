@@ -1,0 +1,48 @@
+SPH-UG config pre-retirement
+--------------------------------
+
+
+SPH Undergraduate Students
+
+ Review= Owners
+ Subscription= Open,Confirm
+ Send= Editor,Hold
+Notify= Yes
+ Reply-to= Sender,Respect
+Files= No
+ Stats= Normal,Owner
+Ack= Yes
+ Errors-To= Owners
+Validate= No
+Notebook= Yes,/listserv/lists/sph-ug,Monthly,Public
+Notebook= (fmsc-undergrad),(knes-ug),(pch-undergrad)
+Notebook= (usg-publichealth),(phsc-ug)
+ Confidential= Yes
+ Default-Options= SUBJECThdr,Repro
+ Sub-lists= fmsc-undergrad,knes-ug,pch-undergrad,usg-publichealth
+ Sub-lists= phsc-ug
+
+Editor= kellyb@umd.edu (Kelly Elizabeth Blake)
+Editor= etc@umd.edu (Erin Thiel Caporellie)
+Editor= mhaider@umd.edu (Muhiuddin Haider)
+Editor= elmc@umd.edu (Erin McClure)
+Editor= amccart2@UMD.EDU (Andrew McCarty)
+Editor= efmaring@umd.edu (Lis Maring)
+Editor= kcips@umd.edu (Kristin Cipriani)
+Editor= sph-sc@umd.edu (SPH Solutions Center)
+Editor= (epi-bio-staff),(hsa-staff),(fmsc-staff),(miaeh-staff)
+Editor= (pch-staff),(sph-deans-staff)
+
+
+Moderator= All,kellyb@umd.edu,etc@umd.edu,bfaris@umd.edu
+Moderator= elmc@umd.edu
+Owner= bfaris@umd.edu (Bem Faris)
+Owner= kellyb@umd.edu (Kelly Elizabeth Blake)
+Owner= amccart2@umd.edu (Andrew McCarty)
+Owner= kirianv@umd.edu (Kirian Villalta)
+Owner= mshelley@umd.edu (Mary Shelley)
+Owner= Quiet:,lushniak@umd.edu (Boris D. Lushniak)
+Owner= elmc@umd.edu (Erin McClure)
+Owner= etc@umd.edu (Erin Thiel Caporellie)
+
+
