@@ -22,27 +22,8 @@ Notebook= (usg-publichealth),(phsc-ug)
  Sub-lists= fmsc-undergrad,knes-ug,pch-undergrad,usg-publichealth
  Sub-lists= phsc-ug
 
-Editor= kellyb@umd.edu (Kelly Elizabeth Blake)
-Editor= etc@umd.edu (Erin Thiel Caporellie)
-Editor= mhaider@umd.edu (Muhiuddin Haider)
-Editor= elmc@umd.edu (Erin McClure)
-Editor= amccart2@UMD.EDU (Andrew McCarty)
-Editor= efmaring@umd.edu (Lis Maring)
-Editor= kcips@umd.edu (Kristin Cipriani)
-Editor= sph-sc@umd.edu (SPH Solutions Center)
-Editor= (epi-bio-staff),(hsa-staff),(fmsc-staff),(miaeh-staff)
-Editor= (pch-staff),(sph-deans-staff)
+Editor=<email address removed>
 
+Moderator= All,<email address removed>
 
-Moderator= All,kellyb@umd.edu,etc@umd.edu,bfaris@umd.edu
-Moderator= elmc@umd.edu
-Owner= bfaris@umd.edu (Bem Faris)
-Owner= kellyb@umd.edu (Kelly Elizabeth Blake)
-Owner= amccart2@umd.edu (Andrew McCarty)
-Owner= kirianv@umd.edu (Kirian Villalta)
-Owner= mshelley@umd.edu (Mary Shelley)
-Owner= Quiet:,lushniak@umd.edu (Boris D. Lushniak)
-Owner= elmc@umd.edu (Erin McClure)
-Owner= etc@umd.edu (Erin Thiel Caporellie)
-
-
+Owner= <email address removed>
